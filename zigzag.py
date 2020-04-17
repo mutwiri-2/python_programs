@@ -13,11 +13,11 @@ try:
     
         if indent_increasing:
             indent += 1
-            if indent == 20:
+            if indent == 20: # change direction
                 indent_increasing = False
         else:
             indent -= 1
-            if indent == 0:
+            if indent == 0: # change direction
                 indent_increasing = True
 except KeyboardInterrupt:
     sys.exit()
