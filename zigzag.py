@@ -19,5 +19,5 @@ try:
             indent -= 1
             if indent == 0: # change direction
                 indent_increasing = True
-except KeyboardInterrupt:
+except KeyboardInterrupt: # cleanly handle the ctrl+c (KeyboardInterrupt) exception - exit program without a cryptic message 
     sys.exit()
