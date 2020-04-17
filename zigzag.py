@@ -8,7 +8,7 @@ indent_increasing = True # if white spaces are increasing or not
 try:
     while True: # main program loop
         print(' ' * indent, end='')
-        print('******')
+        print('*' * 10)
         time.sleep(0.1)
     
         if indent_increasing:
