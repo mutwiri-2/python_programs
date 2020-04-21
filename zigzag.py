@@ -13,7 +13,7 @@ try:
     
         if indent_increasing:
             indent += 1
-            if indent == 20: # change direction
+            if indent == 10: # change direction
                 indent_increasing = False
         else:
             indent -= 1
