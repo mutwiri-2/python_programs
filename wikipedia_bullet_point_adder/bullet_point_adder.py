@@ -3,10 +3,11 @@
 
 import pyperclip
 
-text = pyperclip.paste()
+text = pyperclip.paste() 
 
 lines = text.split('\n')
 for i in range(len(lines)):
     lines[i] = '* ' + lines[i]
+'\n'.join(lines)
 
 pyperclip.copy()
