@@ -3,11 +3,11 @@
 
 import pyperclip
 
-text = pyperclip.paste() 
+text = pyperclip.paste() # get text from clipboard
 
-lines = text.split('\n')
+lines = text.split('\n')  # get a list of all lines in the text copied
 for i in range(len(lines)):
-    lines[i] = '* ' + lines[i]
-'\n'.join(lines)
+    lines[i] = '* ' + lines[i] # add bullet point to each line
+'\n'.join(lines)  # join the modified lines into a string ready to be copied to the clipboard
 
 pyperclip.copy()
