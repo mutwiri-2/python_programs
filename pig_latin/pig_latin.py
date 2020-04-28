@@ -76,3 +76,11 @@ def pig_latin():
         while len(word) > 0 and word[0] not in VOWELS:
             prefix_consonants += word[0] # remove consonant sounds from beginning of word
             word = word[1:]
+
+        # translate word to Pig Latin
+        if prefix_consonants != '':
+            word += prefix_consonants + 'ay'
+        else:
+            word += 'yay'
+
+        # add translated word to pig_latin_list
