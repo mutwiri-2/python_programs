@@ -65,4 +65,14 @@ def pig_latin():
         while not word[-1].isalpha():
             suffix_non_letters += word[-1]
             word = word[:-1]
+        
+        # Remember if word was uppercase or titlecase to convert back later
+        was_upper = word.isupper()
+        was_title = word.istitle()
 
+        word = word.lower() # convert word to lowercase for translation
+
+        prefix_consonants = '' # variable to store consonant sounds that appear at the beginning of the word
+        while len(word) > 0 and word[0] not in VOWELS:
+            prefix_consonants += word[0] # remove consonant sounds from beginning of word
+            word = word[1:]
