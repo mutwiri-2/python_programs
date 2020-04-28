@@ -83,4 +83,11 @@ def pig_latin():
         else:
             word += 'yay'
 
-        # add translated word to pig_latin_list
+        # convert word back to original case
+        if was_upper:
+            word = word.upper()
+        if was_title:
+            word = word.lower()
+        
+        
+
