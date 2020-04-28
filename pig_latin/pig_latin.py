@@ -93,4 +93,3 @@ def pig_latin():
         pig_latin_list.append(prefix_non_letters + word + suffix_non_letters)
 
     return ' '.join(pig_latin_list) # return the new translated text
-
