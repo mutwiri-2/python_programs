@@ -89,5 +89,7 @@ def pig_latin():
         if was_title:
             word = word.lower()
         
+        # add converted word to pig latin list
+        pig_latin_list.append(prefix_non_letters + word + suffix_non_letters)
         
 
