@@ -47,7 +47,7 @@
 # piglatin.py - a program to translate English words to pig latin
 
 def pig_latin():
-    text = input("Enter an English text to translate to Pig Latin: ")
+    text = input("Enter an English text to translate to Pig Latin:\n")
 
     VOWELS = ('a', 'e', 'i', 'o', 'u', 'y') # constant to store vowel sounds
 
