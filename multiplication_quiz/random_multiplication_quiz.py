@@ -13,4 +13,14 @@ for question_number in range(number_of_questions):
 
     prompt = f"Question {question_number+1}: {num1} * {num2} = __\n"
 
-    
+    try:
+        pyip.inputStr(prompt, allowRegexes=['^%s$'%(num1*num2)], blockRegexes=[('.*', 'Incorrect!')], timeout=8, limit=3)
+    except pyip.TimeoutException:
+        print("You ran out of time!")
+    except pyip.RetryLimitException:
+        print("You ran out of attempts!")
+    else:
+        print("Good that's the Correct answer!")
+        correct_answers += 1
+    time.sleep(1)
+print(f"You got {correct_answers} correct out of a possible {number_of_questions}")
