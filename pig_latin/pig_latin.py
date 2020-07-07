@@ -4,19 +4,20 @@
 def pig_latin():
     text = input("Enter an English text to translate to Pig Latin:\n")
 
-    VOWELS = ('a', 'e', 'i', 'o', 'u', 'y') # vowel sounds
+    VOWELS = ('a', 'e', 'i', 'o', 'u', 'y')
 
     pig_latin_words_list = [] 
     for word in text.split():
-        prefix_non_letters = '' # a string to store non-letter characters at the beginning of the word
+        prefix_non_letters = '' # non-letter characters at the beginning of the word
         while len(word) > 0 and not word[0].isalpha(): 
             prefix_non_letters += word[0]
             word = word[1:]
-        if len(word) == 0: # if the whole word is made of non-letters, add it to the pig_latin_words_list and continue to next word
+        # if the whole word is made of non-letters, add it to the pig_latin_words_list and continue to next word
+        if len(word) == 0:
             pig_latin_words_list.append(prefix_non_letters)
             continue
 
-        suffix_non_letters = '' # a string to store non-letter characters at the end of the word
+        suffix_non_letters = '' # non-letter characters at the end of the word
         while not word[-1].isalpha():
             suffix_non_letters += word[-1]
             word = word[:-1]
@@ -27,9 +28,9 @@ def pig_latin():
 
         word = word.lower() # convert word to lowercase for translation
 
-        prefix_consonants = '' # variable to store consonant sounds that appear at the beginning of the word
+        prefix_consonants = '' # consonant sounds that appear at the beginning of the word
         while len(word) > 0 and word[0] not in VOWELS:
-            prefix_consonants += word[0] # remove consonant sounds from beginning of word
+            prefix_consonants += word[0]
             word = word[1:]
 
         # translate word to Pig Latin
