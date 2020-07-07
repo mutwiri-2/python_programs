@@ -55,3 +55,36 @@ to create such a suffix
 # "elegant" = "egantelay"
 
 # for more, read >>> https://en.wikipedia.org/wiki/Pig_Latin
+
+Pig latin program Design
+1. Prompt user to enter an English text for translation to pig latin and store
+the text in a variable
+
+2. Have a constant to hold a tuple of lowercase vowel sounds (including 'y')
+
+3. create a list of words from the text entered
+
+4. create a list to store the new words after translation to pig latin
+
+5. for every word;
+ i.) remove any non-alphabet character that comes before and after the word and
+  store these in variables to be added back later
+
+ ii.) store the state of the word i.e if it was uppercase, or capitalized so that
+  it can be restored back to that state later
+
+ iii.) convert the word to lowercase for translation
+
+6. Translate each word using the pig latin language rules
+ i.) If word begins with a consonant sound, remove any consonant sounds at the
+  beginning of the word and store them in a variable, then add that consonant
+  sound plus 'ay' at the end of the word to form the translated version
+ ii.) If word begins with a vowel sound, add 'yay' at the end of the word to
+ form the translated version
+
+7. convert word back to it's original state if it was uppercase or capitalized
+
+8. Add the word plus any removed non-alphabet characters to the list that holds
+the translated words
+
+9. join the translated words back to form a new text in pig latin
