@@ -8,7 +8,7 @@ text = pyperclip.paste() # get text from clipboard
 
 lines = text.split('\n')  # get a list of all lines in the text copied
 for i in range(len(lines)):
-    lines[i] = '* ' + lines[i] # add bullet point and space to beginning of each line
+    lines[i] = '* ' + lines[i].strip() # add bullet point and space to beginning of each line
 text = '\n'.join(lines)  # join the modified lines into a string
 
 pyperclip.copy(text)
